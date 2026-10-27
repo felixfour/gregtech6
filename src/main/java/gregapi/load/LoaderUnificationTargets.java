@@ -27,6 +27,8 @@ import gregapi.util.ST;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 
+import static gregapi.data.CS.RAILCRAFT_PLATES;
+
 /**
  * @author Gregorius Techneticies
  */
@@ -726,11 +728,13 @@ public class LoaderUnificationTargets implements Runnable {
 		OreDictManager.INSTANCE.setTarget(OP.oreBasalt      , MT.Emerald                , MD.RC, "ore", 3);
 		OreDictManager.INSTANCE.setTarget(OP.oreBasalt      , MT.Lapis                  , MD.RC, "ore", 4);
 		OreDictManager.INSTANCE.setTarget(OP.oreNetherrack  , MT.Firestone              , MD.RC, "ore", 5);
+		if (RAILCRAFT_PLATES) {
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Fe                     , MD.RC, "part.plate", 0);
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Steel                  , MD.RC, "part.plate", 1);
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.TinAlloy               , MD.RC, "part.plate", 2);
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Cu                     , MD.RC, "part.plate", 3);
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Pb                     , MD.RC, "part.plate", 4);
+		}
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Al                     , MD.MaCu, "crafting", 7);
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Au                     , MD.MaCu, "crafting",13);
 		OreDictManager.INSTANCE.setTarget(OP.plate          , MT.Ti                     , MD.MaCu, "crafting",17);
